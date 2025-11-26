@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Productos</title>
+    <script type="module" src="/static/js/main.js" defer></script>
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Gestor de Productos</h1>
+        <p>App construida con <strong>Flask + JavaScript</strong></p>
+    </header>
+
+    <section class="panel">
+        <h2>Agregar producto</h2>
+        <form id="form-product" enctype="multipart/form-data">
+            <input type="text" id="nombre-producto" placeholder="Nombre del producto" required />
+            <input type="number" id="precio-producto" placeholder="Precio del producto" required />
+            <input type="file" id="imagen-producto" accept="image/*" required />
+            <button type="submit">Agregar</button>
+        </form>
+    </section>
+
+    <div class="panel">
+        <h2>Lista de Productos</h2>
+        <div id="loader" style="display: none; margin:20px 0;">
+            <img src="https://i.gifer.com/ZZ5H.gif" alt="Cargando..." width="50" />
+        </div>
+        <div id="product-list">
+        </div>
+    </div>
+
+    <section class="panel">
+        <h2>Deja un Comentario</h2>
+        <form id="form-comentario">
+            <input type="number" id="idProducto" placeholder="ID del producto" required />
+            <input type="text" id="usuario-comentario" placeholder="Tu nombre" required />
+            <textarea id="texto-comentario" placeholder="Tu comentario" required></textarea>
+            <button type="submit">Enviar Comentario</button>
+        </form>
+    </section>
+
+
+    <footer>
+        <p>Curso: Python con JavaScript - Desarrollo y Despliegue. Ing. Francisco Suarez</p>
+    </footer>
+
+</body>
+
+</html>
